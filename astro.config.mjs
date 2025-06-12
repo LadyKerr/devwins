@@ -13,7 +13,9 @@ export default defineConfig({
     site: siteUrl + "/",
 
     integrations: [
-        tailwind(),
+        tailwind({
+            configFile: './tailwind.config.js'
+        }),
         react(),
         svgr(),
         sitemap({
