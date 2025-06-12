@@ -1,12 +1,14 @@
 ---
 import Layout from "layouts/Layout.astro";
+import { DevWinsTracker } from "../libs/components";
 ---
 
 <Layout
     title="Hello RenderATL"
     description="Hello RenderATL"
 >
-    <main class="bg-secondary min-h-screen flex items-center justify-center">
-        <h1 class="text-6xl font-bold text-primary">Hello RenderATL</h1>
+    <main class="bg-secondary min-h-screen flex flex-col items-center justify-center">
+        <h1 class="text-6xl font-bold text-primary mb-8">Hello RenderATL</h1>
+        <DevWinsTracker client:only="react" />
     </main>
 </Layout>
