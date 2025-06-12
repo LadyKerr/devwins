@@ -1,126 +1,91 @@
-# 🚀 CODEXCODE ASTRO STARTER
+# DevWins 🏆
 
-## 📚 Changes
+**Track your developer wins and celebrate your career milestones**
 
-This Boilerplate will be updated with new features and improvements.
+DevWins is a modern web application designed to help developers document, track, and celebrate their professional achievements. Whether it's completing a challenging project, learning a new technology, getting promoted, or solving a complex bug, DevWins helps you maintain a comprehensive record of your career victories.
 
-If you want us to change or add something, please contact us on our [Discord Server](https://discord.gg/kpYgj5cw)
+## ✨ Features
 
-Have fun!
+- **📝 Win Tracking**: Document your professional achievements with details and context
+- **🎯 Career Milestones**: Track important career moments and growth
+- **📊 Progress Visualization**: View your wins over time with beautiful charts
+- **🏷️ Categorization**: Organize wins by project, technology, or achievement type
+- **📱 Responsive Design**: Access your wins from any device
+- **🚀 Performance Optimized**: Built with modern web technologies for speed
 
-## 📚 Overview
+## 🛠️ Tech Stack
 
-A modern, performance-driven starter template integrating **Astro** with **React**, designed for static site generation with dynamic UI components. This template ensures a seamless developer experience while optimizing for speed and **SEO**.
+This project is built with modern web technologies:
 
-## 🎨 Tech Stack
+### Core Framework
+- **[Astro](https://astro.build/)** - Static site generator with dynamic capabilities
+- **[React](https://react.dev/)** - UI components and interactivity
+- **[TypeScript](https://www.typescriptlang.org/)** - Type-safe development
 
--   [**Astro**](https://astro.build/) - Static Site Generator
--   [**React**](https://reactjs.org/) - Component-Based UI
--   [**Tailwind CSS**](https://tailwindcss.com/) - Utility-First Styling
--   [**Lucide React**](https://lucide.dev/) - SVG Icons
--   [**TypeScript**](https://www.typescriptlang.org/) - Type Safety & Enhanced DX
+### Styling & UI
+- **[Tailwind CSS](https://tailwindcss.com/)** - Utility-first CSS framework
+- **[Lucide React](https://lucide.dev/)** - Beautiful icon library
+- **[Swiper](https://swiperjs.com/)** - Modern slider components
 
-## 🗂️ Project Structure
+### Development Tools
+- **[Vite](https://vitejs.dev/)** - Fast build tool and dev server
+- **[PostCSS](https://postcss.org/)** - CSS processing
+- **[Autoprefixer](https://autoprefixer.github.io/)** - CSS vendor prefixing
 
-To maintain clarity and scalability, we organize the project using a **libs system**. This ensures reusability and a modular architecture.
+### Form Handling & Validation
+- **[React Hook Form](https://react-hook-form.com/)** - Performant form library
+- **[Zod](https://zod.dev/)** - Schema validation
 
-```
-├── src/
-│   ├── layouts/           # Base layouts such as the **MainLayout** and **SEO meta configurations**.
-│   ├── libs/
-│   │   ├── ui/             # All components, blocks, modules - whole structure of the reusable elements that you can use in your project.
-│   ├── pages/             # Astro pages (each file maps to a route)
-│   ├── static/            # All static assets - images, icons, fonts, etc.
-├── public/                # Public assets (served as-is)
-├── astro.config.mjs       # Astro configuration
-├── tailwind.config.js     # Tailwind configuration
-├── tsconfig.json          # TypeScript configuration
-```
+## 🚀 Getting Started
 
-### ⚡️ Why like this?
+### Prerequisites
 
-**Astro.build** is a modern front-end framework that allows you to build faster, optimized websites. It's compatible with React, which is a popular library for building user interfaces.
+Make sure you have the following installed:
+- **Node.js** (version 18 or higher)
+- **npm** or **yarn** package manager
 
-**Tailwind** -A utility-first approach ensures rapid UI development without writing excessive custom CSS.
+### Installation
 
-## 📈 Performance Best Practices
+1. **Fork and Clone the repository**
+   ```bash
+   git clone https://github.com/LadyKerr/devwins
+   cd devwins
+   ```
 
--   Use **.WEBP format** for images to reduce file size.
--   Optimize assets with tools like [**TinyPNG**](https://tinypng.com/).
--   Self-host fonts instead of using Google Fonts to improve load times.
--   Keep the HTML structure **lightweight** to ensure fast rendering.
+2. **Install dependencies**
+   ```bash
+   npm install
+   # or
+   yarn install
+   ```
 
-## 🎨 Static Media
+3. **Start the development server**
+   ```bash
+   npm run dev
+   # or
+   yarn dev
+   ```
 
--   Fonts - setup there you'r all fonts - you don't want to get link to google - this can slow down you'r page, but if you needed, you can delete it and use google tags
+4. **Open your browser**
+   Navigate to `http://localhost:4321` to see the application
 
--   images - Images are setup with typescript, so this component is easy to use & when you import image there you don't need to worry about use import for every single image
+### Available Scripts
 
-```
-  @example
-  <Image src="logo" alt="logo" width="50px" height="50px" />
-```
+- `npm run dev` - Start the development server
+- `npm run build` - Build the application for production
+- `npm run preview` - Preview the production build locally
+- `npm run astro` - Run Astro CLI commands
 
-You can use your own icons or use Lucide React icons - its up to you
+## 🤝 Contributing
 
--   icons - Icons are SVG files that you can use in React components, import all you'r icons in static/index.tsx and use it with
+We welcome contributions! Please feel free to submit a Pull Request. For major changes, please open an issue first to discuss what you would like to change.
 
-```
-  @example
-  <Icon name="icon" />
-```
+1. Fork the repository
+2. Create your feature branch (`git checkout -b feature/AmazingFeature`)
+3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
+4. Push to the branch (`git push origin feature/AmazingFeature`)
+5. Open a Pull Request
 
-## 💻 Sitemap - robots - SEO ⚠️ IMPORTANT ⚠️
+## 📄 License
 
-⚠️ **Search for** ⚠️ **siteUrl** & change website main link to load properly all preview images & ect
-
-also you can check if there is any CHANGEME or YOUR META DESCRIPTION FOR SEO - if yes, then you want to change it
-
-**Sitemap** is generated automatically from astro.config file.
-
-**Astro.config.mjs** There you can find example usage of sitemap, we add comments with if statements for various scenario, so check it & use it as you like!
-
-**Robots** - Also its generated automatically.
-
-## 🏗️ Key Directories Explained
-
-### `/src/layouts`
-
-Houses base layouts such as the **MainLayout** and **SEO meta configurations**.
-
-### `/src/ui`
-
-All components, blocks, modules - whole structure of the reusable elements that you can use in your project.
-
-### `/src/pages`
-
-Astro pages that **automatically generate routes** without the need for additional configurations.
-
-### `/src/libs/static`
-
-All static assets - images, icons, fonts, etc.
-
-also images and icons are setup with typescript (examples you can find in above section)
-
-## 🧞 Commands
-
-#### All commands are run from the root of the project, from a terminal:
-
-| Command                   | npm Command               | yarn Command           | Action                                           |
-| :------------------------ | :------------------------ | :--------------------- | :----------------------------------------------- |
-| `npm install`             | `npm install`             | `yarn install`         | Installs dependencies                            |
-| `npm run dev`             | `npm run dev`             | `yarn dev`             | Starts local dev server at `localhost:4321`      |
-| `npm run build`           | `npm run build`           | `yarn build`           | Build your production site to `./dist/`          |
-| `npm run preview`         | `npm run preview`         | `yarn preview`         | Preview your build locally, before deploying     |
-| `npm run astro ...`       | `npm run astro ...`       | `yarn astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `npm run astro -- --help` | `npm run astro -- --help` | `yarn astro -- --help` | Get help using the Astro CLI                     |
-
-## 📞🧞 Contact & Support
-
-[@contact](https://www.codexcode.store/contact) - for any questions or support
-
-also if you want to fast contact with us, you can use our [Discord Server](https://discord.gg/kpYgj5cw)
-
-## 🧞 Authors
-
--   [@codexcode](https://www.codexcode.store)
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
