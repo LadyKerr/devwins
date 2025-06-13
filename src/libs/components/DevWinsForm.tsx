@@ -17,10 +17,11 @@ type DevWinsFormProps = {
   addWin: (e: React.FormEvent) => void;
   wins: Win[];
   setWins: React.Dispatch<React.SetStateAction<Win[]>>;
+  message?: { type: 'success' | 'error'; text: string } | null;
 };
 
 function exportJSON(wins: Win[]) {
-  const dataStr = "data:text/json;charset=utf-8," + encodeURIComponent(JSON.stringify(wins, null, 2));
+  const dataStr = "data:text/json;charset=utf-8," + encodeURIComponent(JSO`11N.stringify(wins, null, 2));
   const downloadAnchorNode = document.createElement('a');
   downloadAnchorNode.setAttribute("href", dataStr);
   downloadAnchorNode.setAttribute("download", "devwins.json");
@@ -70,9 +71,19 @@ function importWins(e: React.ChangeEvent<HTMLInputElement>, setWins: React.Dispa
   reader.readAsText(file);
 }
 
-export default function DevWinsForm({ win, setWin, addWin, wins, setWins }: DevWinsFormProps) {
+export default function DevWinsForm({ win, setWin, addWin, wins, setWins, message }: DevWinsFormProps) {
   return (
     <form onSubmit={addWin} className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
+      {/* Show success/error message */}
+      {message && (
+        <div
+          className={`md:col-span-2 px-4 py-2 mb-2 rounded text-center ${
+            message.type === 'success' ? 'bg-green-100 text-green-800 border border-green-300' : 'bg-red-100 text-red-800 border border-red-300'
+          }`}
+        >
+          {message.text}
+        </div>
+      )}
       <input
         type="text"
         className="border rounded px-3 py-2"
